@@ -1,0 +1,18 @@
+<h2>Dish Details</h2>
+
+
+<div *ngIf="dish">
+
+    <h3>{{ dish.name }}</h3>
+
+    <img src="{{dish.img}}" alt="">
+
+    <h4>{{ dish.price | currency:'EUR':true }}</h4>
+
+    <p>{{ dish.description }}</p>
+
+    <button type="button" class="btn btn-success" (click)="addToCart()">Order</button>
+
+</div>
+
+<br>

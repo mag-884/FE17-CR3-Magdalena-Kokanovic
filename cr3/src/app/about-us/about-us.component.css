@@ -1,0 +1,36 @@
+.container {
+
+    font-family: bold;
+    width: 1000px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px 50px;
+    
+    font-family: 'Happy Monkey', cursive;
+  
+  }
+ 
+  
+ 
+  p {
+  
+    color: #070101;
+    font-style: oblique;
+  }
+  
+  li {
+    list-style: none;
+    color: #070303;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+  
+  
+  }
+  
+  
+  
+  footer {
+  
+    text-align: center;
+  }

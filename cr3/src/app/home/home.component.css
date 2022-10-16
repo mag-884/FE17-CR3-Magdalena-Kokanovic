@@ -1,0 +1,13 @@
+
+
+.grid-container {
+  box-shadow: #f7f5f5; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: auto;
+  row-gap: 40px;
+  column-gap: 80px;
+}
+
+

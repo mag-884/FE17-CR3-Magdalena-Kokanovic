@@ -1,0 +1,57 @@
+<div class="cart-item" *ngFor="let item of items">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src={{item.img}} class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">{{item.price | currency:'EUR':true }}</p>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="card text-bg-light mb-3" style="max-width: 18rem; text-align:left;">
+  <div class="card-header">Summary</div>
+  <div class="card-body">
+
+    <p class="card-text">Products {{makeSumm()}}</p>
+    <br>
+    <p class="card-text">Service</p>
+    <br>
+    <p class="card-text">Discount</p>
+    <hr>
+    <p class="card-text">Total amount (including VAT)</p>
+
+
+  </div>
+</div>
+
+
+
+<br><br>
+
+<h2><i>Order Form</i> </h2>
+<p>please fill up the info for delivery</p>
+<hr>
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="name" class="form-control" id="inputName">
+
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Address</label>
+    <input type="address" class="form-control" id="inputAddress">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Purchase</button>
+</form>
+<br>

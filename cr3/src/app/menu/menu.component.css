@@ -1,0 +1,17 @@
+h2
+{
+  text-align: center;
+}
+
+.card-footer {
+
+  
+    display: flex; 
+   
+  }
+
+  button{
+
+    margin: 6px;
+  }
+

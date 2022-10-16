@@ -1,0 +1,41 @@
+<br>
+<h2>Our specialities</h2>
+<br>
+<hr><br>
+<div class="row m-3 d-flex justify-content-center">
+  <div class="col row-col-md-4 row-col-lg-2" *ngFor="let dish of dishes; index as dishId">
+    <ng-template [ngIf]="dish.availability === true" [ngIfElse]="unavailable">
+      <div class="card m-2" style="width: 18rem">
+        <img src="{{ dish.img }}" alt="{{ dish.name }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ dish.name }}</h5>
+          <p class="card-text">
+            {{dish.description}}
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ dish.price | currency:'EUR':true}}</li>
+          <div class="card_footer">
+            <button type="button" class="btn btn-primary" routerLink="/menu/{{dishId}}">Details</button>
+            <button type="button" class="btn btn-success" (click)="addToCart(dish)">Order</button>
+          </div>
+        </ul>
+      </div>
+    </ng-template>
+    <ng-template #unavailable>
+      <div class="card m-2" style="width: 18rem">
+        <img src="{{ dish.img }}" alt="{{ dish.name }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ dish.name }}</h5>
+          <br><br><br><br>
+          <hr>
+          <p class="card-text">
+            Not available
+          </p>
+
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+</div>
