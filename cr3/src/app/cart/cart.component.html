@@ -1,3 +1,6 @@
+
+
+<br>
 <div class="cart-item" *ngFor="let item of items">
   <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
@@ -10,7 +13,7 @@
           <p class="card-text">{{item.description}}</p>
           <p class="card-text">{{item.price | currency:'EUR':true }}</p>
 
-          
+
         </div>
       </div>
     </div>
@@ -22,13 +25,13 @@
   <div class="card-header">Summary</div>
   <div class="card-body">
 
-    <p class="card-text">Products {{makeSumm()}}</p>
+    <p class="card-text">Products {{calculateSum()| currency:'EUR':true}}</p>
     <br>
-    <p class="card-text">Service</p>
+    <p class="card-text">Service {{calculateService()| currency:'EUR':true}}</p>
     <br>
-    <p class="card-text">Discount</p>
+    <p class="card-text">Discount {{calculateDiscount()| currency:'EUR':true}}</p>
     <hr>
-    <p class="card-text">Total amount (including VAT)</p>
+    <p class="card-text">Total amount (including VAT) {{calculateTotal()| currency:'EUR':true}}</p>
 
 
   </div>
